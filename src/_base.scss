@@ -1,0 +1,36 @@
+
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+$text-color: #EFEFEF;
+
+$black-primary: #0F0F0F;
+$black-secondary: #0F0F0F;
+$border-color: #222222;
+$text-color-2:#aaaaaab1;
+$breakpoint-medium: 1224px;
+$breakpoint-small: 520px;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: $black-primary;
+   background-attachment: fixed;
+   color: $text-color;
+   font-family: 'Poppins', sans-serif;
+   letter-spacing: 0.1px;
+}
+
+@mixin line-clamp($number) {
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: $number;
+   -webkit-box-orient: vertical;
+}
+
+::-webkit-scrollbar {
+   width: 0px;
+}
