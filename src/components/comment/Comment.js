@@ -17,10 +17,11 @@ const Comment = ({ comment }) => {
             className='mr-3 rounded-circle'
          />
          <div className='comment__body'>
-            <p className='mb-1 comment__header'>
-               {authorDisplayName} • {moment(publishedAt).fromNow()}
+            <p className='mb-2 comment__header'>
+               {authorDisplayName} • 
+               <span className='time text-white-50'>{moment(publishedAt).fromNow()}</span>
             </p>
-            <p className='mb-0'>{textDisplay}</p>
+            <p className='mb-0 text-white comment__text'>{textDisplay}</p>
          </div>
       </div>
    )

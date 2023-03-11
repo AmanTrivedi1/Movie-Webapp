@@ -1,14 +1,25 @@
 .comment {
    font-size: 0.9rem;
-   border-bottom: 2px solid #353946;
+   // border-bottom: 2px solid #353946;
    img {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
    }
    &__header {
-      color: #fff;
+      color: #E6E6E6;
+      margin-left: 10px;
    }
    &__body {
       overflow: hidden;
+      padding: 5px;
    }
+}
+.time{
+  
+   margin-left: 10px;
+   font-size: 12px;
+}
+.comment__text{
+   font-size: 12px;
+   margin-left: 10px;
 }

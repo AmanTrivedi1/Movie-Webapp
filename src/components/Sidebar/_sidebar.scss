@@ -1,16 +1,13 @@
 @import '../../_base.scss';
 
 .sidebar {
-   background: $black-secondary;
-
+   background: #0F0F0F;
    display: flex;
    flex-direction: column;
-
    width: 240px;
    height: 90vh;
    padding-top: 2rem;
    transition: transform 0.2s ease-in;
-
    position: sticky;
    top: 10vh;
    left: 0;
@@ -18,7 +15,7 @@
    li {
       display: flex;
       align-items: center;
-
+      color: #E6E6E6;
       padding: 0.6rem 1.5rem;
       margin: 0.2rem 0;
       cursor: pointer;
@@ -26,12 +23,15 @@
       span {
          margin-left: 1rem;
          font-size: 14px;
-         font-weight: 500;
+         font-family: Poppins , sans-serif;
+         font-weight: 400;
          letter-spacing: 0.4px;
+         color: #E6E6E6;
       }
 
       &:hover {
-         background-color: $border-color;
+         background-color:#3D3D3D;
+         border-radius: 10px;
       }
    }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
-
+import "./api"
 import Header from './components/header/Header'
 import Sidebar from './components/Sidebar/Sidebar'
 import HomeScreen from './screens/homeScreen/HomeScreen'
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
                sidebar={sidebar}
                handleToggleSidebar={handleToggleSidebar}
             />
-            <Container fluid className='app__main '>
+            <Container fluid className='app__main  '>
                {children}
             </Container>
          </div>

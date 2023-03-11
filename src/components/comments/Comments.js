@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "../../_base.scss"
 import { useDispatch, useSelector } from 'react-redux'
 import {
    addComment,
@@ -31,7 +32,7 @@ const Comments = ({ videoId, totalComments }) => {
    }
    return (
       <div className='comments'>
-         <p>{totalComments} Comments</p>
+         <p className=' comments__count text-white-50 '>{totalComments} Comments</p>
          <div className='my-2 comments__form d-flex w-100'>
             <img
                src='https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png'

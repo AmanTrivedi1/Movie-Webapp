@@ -71,9 +71,9 @@ const Video = ({ video }) => {
          <div className='video__top'>
             {/* <img src={medium.url} alt='' /> */}
             <LazyLoadImage src={medium.url} effect='blur' />
-            <span className='video__top__duration'>{_duration}</span>
+            <span className='video__top__duration text-white'>{_duration}</span>
          </div>
-         <div className='video__title'>{title}</div>
+         <div className='video__title text-white'>{title}</div>
          <div className='video__details'>
             <span>
                <AiFillEye /> {numeral(views).format('0.a')} Views •{' '}
@@ -83,7 +83,7 @@ const Video = ({ video }) => {
          <div className='video__channel'>
             <LazyLoadImage src={channelIcon?.url} effect='blur' />
 
-            <p>{channelTitle}</p>
+            <p className='text-white'>{channelTitle}</p>
          </div>
       </div>
    )

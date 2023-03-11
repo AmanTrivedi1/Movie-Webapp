@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.body {
+  background-color: #0f0f0f;
+}
+.welcom__text {
+  color: #e0e0e0;
+}
+.social {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.social:last-child {
+  margin-right: 0px;
+}
+.social {
+  display: flex;
+}
+.login__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f0f;
+  color: white;
+  border: none;
+  width: 330px;
+  height: 45px;
+  border-radius: 11px;
+  font-size: 13px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.with-social {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 174px;
+  margin-top: 20px;
+}
+
+.paragraph-description {
+  font-size: 0.7rem;
+  margin: 0 38px;
+  color: #b1b1b1;
+  position: absolute;
+  bottom: 30px;
+}
+
+.be-main {
+  width: 0.5px;
+  height: 28px;
+  background-color: #d2d2d2;
+  margin-left: 10px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #222222;
+  color: #e6e6e6;
+}
+.input-box label {
+  position: absolute;
+  text-align: left;
+  font-size: 0.5rem;
+  pointer-events: none;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  top: 2px;
+  left: 0;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+  font-size: 0.5rem;
+  top: -11px;
+}
+
+.input-box {
+  width: 250px;
+  margin: 0 10px;
+  position: relative;
+  background-color: #222222;
+}
+
+.continue {
+  background-color: #fe0000;
+  color: white;
+  border: none;
+  width: 330px;
+  height: 45px;
+  border-radius: 11px;
+  font-size: 13px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.input-main {
+  width: 330px;
+  height: 52px;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.login-main p {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #ababab;
+}
+
+.login-main h1 {
+  font-size: 1.5rem;
+}
+
+.container__login {
+  width: 1000px;
+  height: 700px;
+  margin: 65px auto;
+  background-color: white;
+  transition: 0.5s;
+  font-family: Poppins, sans-serif;
+}
+
+.detalis-main {
+  text-align: center;
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #222222;
+  position: relative;
+}
+
+.logo {
+  width: 155px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.money-locker {
+  float: right;
+  width: 50%;
+  background-color: #222222;
+  padding: 10px;
+  height: 100%;
+}
+
+.title-social {
+  color: #949494;
+  font-size: 0.8rem;
+  margin-top: 15px;
+  display: flex;
+  width: 310px;
+  margin: auto;
+  margin-top: 18px;
+  align-items: center;
+}
+
+.title-social::before {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 0.5px;
+  background-color: #949494;
+  margin-right: 13px;
+}
+
+.title-social::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 0.5px;
+  background-color: #949494;
+  margin-left: 13px;
+}
+
+@media only screen and (max-width: 1020px) {
+  .money-locker {
+    display: none;
+  }
+  .detalis-main {
+    width: 100%;
+  }
+  .container__login {
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    width: 100%;
+  }
+}

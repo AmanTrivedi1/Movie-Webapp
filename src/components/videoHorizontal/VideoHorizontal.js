@@ -83,7 +83,7 @@ const VideoHorizontal = ({ video }) => {
          </Col>
          <Col xs={6} md={6} className='p-0 videoHorizontal__right'>
             <p className='mb-1 videoHorizontal__title'>{title}</p>
-            <div className='videoHorizontal__details'>
+            <div className='videoHorizontal__details text-white-50'>
                <AiFillEye /> {numeral(views).format('0.a')} Views •
                {moment(publishedAt).fromNow()}
             </div>
@@ -95,7 +95,7 @@ const VideoHorizontal = ({ video }) => {
                effect='blur'
              
             /> */}
-               <p className='mb-0'>{channelTitle}</p>
+               <p className='mb-0 channel_title'>{channelTitle}</p>
             </div>
          </Col>
       </Row>

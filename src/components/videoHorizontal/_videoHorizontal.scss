@@ -1,8 +1,8 @@
 @import '../../base.scss';
 
 .videoHorizontal {
-   border-bottom: 0.3px solid $border-color;
-
+   // border-bottom: 0.3px solid $border-color;
+    font-family: Poppins ,sans-serif;
    cursor: pointer;
 
    &__left {
@@ -12,7 +12,7 @@
 
    &__thumbnail {
       width: 100%;
-
+     border-radius: 10px;
       &-wrapper {
          width: 100%;
       }
@@ -28,16 +28,17 @@
       padding: 0.2rem;
       background: #080808ec;
       border-radius: 3px;
+      color: #E6E6E6;
+      font-size: 12px;
    }
 
    &__details {
-      font-size: 0.9rem;
+      font-size: 12px;
    }
 
    &__title {
       font-size: 1rem;
-
-      // color: #fff;
+      color: #E6E6E6;
       letter-spacing: 0.3px;
 
       @include line-clamp(2);
@@ -53,12 +54,15 @@
          cursor: pointer;
       }
       p {
-         font-size: 0.9rem;
+         font-size: 12px;
          @include line-clamp(1);
       }
    }
 }
-
+.channel_title{
+   color: #E6E6E6;
+   font-size: 12px;
+}
 @media (max-width: $breakpoint-small) {
    .videoHorizontal {
       font-size: 0.8rem;
@@ -77,9 +81,7 @@
          }
       }
 
-      //   &__desc {
-      //      display: none;
-      //   }
+    
 
       &__title {
          font-size: 1rem;
@@ -87,3 +89,4 @@
       }
    }
 }
+

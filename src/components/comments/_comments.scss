@@ -1,8 +1,12 @@
+
 .comments__form {
    img {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
       object-fit: contain;
+      margin-left: 10px;
+      font-family:  Poppins , sans-serif;
    }
    input {
       background: transparent;
@@ -15,12 +19,27 @@
    }
 
    button {
-      background-color: #353946;
-      color: #fff;
-      letter-spacing: 0.5px;
+      background-color: #3fa5fd;
+      color: #000;
+      font-family: Poppins , sans-serif;
+      font-size: 14px;
+      border-radius: 20px;
       &:focus {
          border: none;
          outline: none;
       }
+      &:hover{
+         background-color: #4aaafd;     
+       }
    }
+}
+.comments{
+   font-family: Poppins , sans-serif;
+}
+.comments__count{
+   font: 12px;
+   margin-left: 10px;
+}
+.comments__list{
+   font-size: 14px;
 }

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
+import logo from "../../assets/logo.png"
 import { login } from '../../redux/actions/auth.action'
 
 import './loginScreen.scss'
@@ -27,7 +28,7 @@ const LoginScreen = () => {
          <div className='login__container'>
             <h2>Youtube Clone</h2>
             <img
-               src='http://pngimg.com/uploads/youtube/youtube_PNG2.png'
+               src={logo}
                alt=''
             />
             <button onClick={handleLogin}>Login With google</button>

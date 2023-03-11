@@ -31,21 +31,21 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
    }, [dispatch, channelId])
 
    return (
-      <div className='py-2 videoMetaData'>
+      <div className='py-2 videoMetaData text-white'>
          <div className='videoMetaData__top'>
-            <h5>{title}</h5>
-            <div className='py-1 d-flex justify-content-between align-items-center'>
-               <span>
+            <h5 className='text-white'>{title}</h5>
+            <div className='py-1 d-flex  justify-content-between align-items-center'>
+               <span className='text-white-50'>
                   {numeral(viewCount).format('0.a')} Views •{' '}
                   {moment(publishedAt).fromNow()}
                </span>
 
-               <div>
-                  <span className='mr-3'>
-                     <MdThumbUp size={26} /> {numeral(likeCount).format('0.a')}
+               <div className='d-flex gap-2 like__button '>
+                  <span className='mr-3 like__button-up  text-white'>
+                     <MdThumbUp size={20} /> {numeral(likeCount).format('0.a')}
                   </span>
-                  <span className='mr-3'>
-                     <MdThumbDown size={26} />{' '}
+                  <span className='mr-3 text-white like__button-down'>
+                     <MdThumbDown size={20} />{' '}
                      {numeral(dislikeCount).format('0.a')}
                   </span>
                </div>
@@ -56,15 +56,14 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
                <img
                   src={channelSnippet?.thumbnails?.default?.url}
                   alt=''
-                  className='mr-3 rounded-circle'
+                  className='mr-3 rounded-circle w-10%'
                />
-               <div className='d-flex flex-column'>
-                  <span>{channelTitle}</span>
-                  <span>
-                     {' '}
+               <div className='d-flex flex-column align-items-center  justify-content-center '>
+                  <span className='text-white channel__name '>{channelTitle}</span>
+                  <span className=' subscriber__count '>
                      {numeral(channelStatistics?.subscriberCount).format(
                         '0.a'
-                     )}{' '}
+                     )}
                      Subscribers
                   </span>
                </div>
@@ -77,9 +76,9 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
                {subscriptionStatus ? 'Subscribed' : 'Subscribe'}
             </button>
          </div>
-         <div className='videoMetaData__description'>
+         <div className='videoMetaData__description text-white description '>
             <ShowMoreText
-               lines={3}
+               lines={2}
                more='SHOW MORE'
                less='SHOW LESS'
                anchorClass='showMoreText'
