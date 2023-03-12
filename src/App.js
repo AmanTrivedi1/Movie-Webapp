@@ -11,6 +11,8 @@ import { Redirect, Route, Routes, useHistory, useNavigate } from 'react-router-d
 import './_app.scss'
 import { useSelector } from 'react-redux'
 import WatchScreen from './screens/watchScreen/WatchScreen'
+import SearchScreen from './components/screens/SearchScreen'
+import SubscriptionsScreen from './components/screens/subscriptionsScreen/SubscriptionScreen'
 
 const Layout = ({ children }) => {
    const [sidebar, toggleSidebar] = useState(false)
@@ -48,8 +50,9 @@ const App = () => {
       <Routes>
          <Route path='/'  element={<Layout><HomeScreen/></Layout>}/>
          <Route path='/auth' element={<LoginScreen/>}/>           
-         <Route path='/search' element={<Layout><h2>Search Screen</h2></Layout>}/>
+         <Route path='/search/:query' element={<Layout><SearchScreen/></Layout>}/>
          <Route path='/watch/:id' element={<Layout><WatchScreen/></Layout>}/>
+         <Route path='/feed/subscriptions' element={<Layout><SubscriptionsScreen/></Layout>}/>
       </Routes>
    )
 }

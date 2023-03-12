@@ -5,6 +5,9 @@ import {
    RELATED_VIDEO_FAIL,
    RELATED_VIDEO_REQUEST,
    RELATED_VIDEO_SUCCESS,
+   SEARCHED_VIDEO_FAIL,
+   SEARCHED_VIDEO_REQUEST,
+   SEARCHED_VIDEO_SUCCESS,
    SELECTED_VIDEO_FAIL,
    SELECTED_VIDEO_REQUEST,
    SELECTED_VIDEO_SUCCESS,
@@ -53,7 +56,7 @@ export const getVideosByCategory = keyword => async (dispatch, getState) => {
          params: {
             part: 'snippet',
 
-            maxResults: 20,
+            maxResults: 50,
             pageToken: getState().homeVideos.nextPageToken,
             q: keyword,
             type: 'video',
@@ -112,7 +115,7 @@ export const getRelatedVideos = id => async dispatch => {
          params: {
             part: 'snippet',
             relatedToVideoId: id,
-            maxResults: 15,
+            maxResults: 50,
             type: 'video',
          },
       })
@@ -125,6 +128,35 @@ export const getRelatedVideos = id => async dispatch => {
       dispatch({
          type: RELATED_VIDEO_FAIL,
          payload: error.response.data.message,
+      })
+   }
+}
+
+
+export const getVideosBySearch = keyword => async (dispatch) => {
+   try {
+      dispatch({
+         type: SEARCHED_VIDEO_REQUEST,
+      })
+      const { data } = await request('/search', {
+         params: {
+            part: 'snippet',
+
+            maxResults: 50,
+            q: keyword,
+            type: 'video,channel',
+         },
+      })
+
+      dispatch({
+         type: SEARCHED_VIDEO_SUCCESS,
+         payload: data.items,
+      })  
+   } catch (error) {
+      console.log(error.message)
+      dispatch({
+         type: SEARCHED_VIDEO_FAIL,
+         payload: error.message,
       })
    }
 }
