@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../redux/actions/auth.action";
 import "./loginScreen.css";
-import bgimage from "../../components/assets/bg-image.jpg";
+
 import logo from "../../components/assets/logo.png";
 
 import { FcGoogle } from "react-icons/fc";
@@ -22,40 +22,30 @@ const LoginScreen = () => {
     if (accessToken) {
       navigate("/");
     }
-  }, [accessToken]);
+  }, [accessToken, navigate]);
 
   return (
     <>
-      <div class="container__login">
-        <img class="money-locker" src={bgimage} alt="You tube " />
-        <div class="detalis-main">
-          <div class="login-main">
-            <img class="logo" src={logo} alt="SmartSave" />
-            <h1 className="welcom__text">Welcome </h1>
-            <p> Please enter Your details</p>
-          </div>
-
-          <div class="form-detalis">
-            <div class="input-main">
-              <div class="be-main"></div>
-              <div class="input-box">
-                <input type="text" class="input" required="" />
-                <label for="#">Email Address</label>
-              </div>
+      <div className="container__acess">
+        <div className="container__login">
+          <div className="detalis-main">
+            <div className="login-main">
+              <img className="logo" src={logo} alt="SmartSave" />
+              <h1 className="welcom__text">Welcome </h1>
             </div>
-          </div>
-          <button class="continue">Continue</button>
-          <div class="title-social">Or Continue With</div>
-          <div class="with-social">
-            <p onClick={handleLogin} className="login__button">
-              Login with <FcGoogle />
+
+            <div className="with-social">
+              <p onClick={handleLogin} className="login__button">
+                Login with <FcGoogle />
+              </p>
+            </div>
+            <p className="paragraph-description">
+              Currently we are only allow user to login via google only please
+              login with goole in future a'll add the functionalty to login via
+              Email thank you
             </p>
+            <p className="warning"> We are not collecting your Data</p>
           </div>
-          <p class="paragraph-description">
-            Currently we are only allow user to login via google only please
-            login with goole in future a'll add the functionalty to login via
-            Email thank you
-          </p>
         </div>
       </div>
     </>

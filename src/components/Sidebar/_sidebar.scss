@@ -1,65 +1,64 @@
-@import '../../_base.scss';
+@import "../../_base.scss";
 
 .sidebar {
-   background: #0F0F0F;
-   display: flex;
-   flex-direction: column;
-   width: 240px;
-   height: 90vh;
-   padding-top: 2rem;
-   transition: transform 0.2s ease-in;
-   position: sticky;
-   top: 10vh;
-   left: 0;
+  background: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 90vh;
+  padding-top: 2rem;
+  transition: transform 0.2s ease-in;
+  position: sticky;
+  top: 10vh;
+  left: 0;
 
-   li {
-      display: flex;
-      align-items: center;
-      color: #E6E6E6;
-      padding: 0.6rem 1.5rem;
-      margin: 0.2rem 0;
-      cursor: pointer;
+  li {
+    display: flex;
+    align-items: center;
+    color: #e6e6e6;
+    padding: 0.6rem 1.5rem;
+    margin: 0.2rem 0;
+    cursor: pointer;
 
-      span {
-         margin-left: 1rem;
-         font-size: 14px;
-         font-family: Poppins , sans-serif;
-         font-weight: 400;
-         letter-spacing: 0.4px;
-         color: #E6E6E6;
-      }
+    span {
+      margin-left: 1rem;
+      font-size: 14px;
+      font-family: Poppins, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      color: #e6e6e6;
+    }
 
-      &:hover {
-         background-color:#3D3D3D;
-         border-radius: 10px;
-      }
-   }
+    &:hover {
+      background-color: #3d3d3d;
+      border-radius: 10px;
+    }
+  }
 
-   hr {
-      background-color: $border-color;
-   }
+  hr {
+    background-color: $border-color;
+  }
 
-   &.open {
-      transform: translateX(0);
-   }
+  &.open {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: $breakpoint-medium) {
-   .sidebar {
-      width: 90px;
-      li {
-         justify-content: center;
-      }
-      span {
-         display: none;
-      }
-   }
+  .sidebar {
+    width: 90px;
+    li {
+      justify-content: center;
+    }
+    span {
+      display: none;
+    }
+  }
 }
 @media (max-width: $breakpoint-small) {
-   .sidebar {
-      transform: translateX(-100%);
-
-      position: fixed;
-      z-index: 999;
-   }
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 999;
+  }
 }
