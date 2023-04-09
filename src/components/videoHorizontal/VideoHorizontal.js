@@ -107,7 +107,7 @@ const VideoHorizontal = ({ video, searchScreen }) => {
 
         <div className="my-1 videoHorizontal__channel d-flex align-items-center">
           {isVideo && <LazyLoadImage src={channelIcon?.url} effect="blur" />}
-          <p className="mb-0 channel_title">{channelTitle}</p>
+          <p className="mb-0 mt-0 channel_title">{channelTitle}</p>
         </div>
       </Col>
     </Row>

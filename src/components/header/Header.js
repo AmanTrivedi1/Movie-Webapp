@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./_header.scss";
+
 import logo from "../assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -12,7 +13,7 @@ const Header = ({ handleToggleSidebar }) => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     navigate(`search/${input}`);
   };
 

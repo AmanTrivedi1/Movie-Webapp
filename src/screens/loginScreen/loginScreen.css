@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+body {
+  background-color: #000000;
+}
+
 .container__acess {
   display: flex;
   justify-content: center;
@@ -12,6 +17,7 @@
   max-width: 400px;
   max-height: 300px;
   background-color: #222222;
+  /* background-color: red; */
 }
 .logo {
   width: 120px;
@@ -55,4 +61,7 @@
   color: #fff;
   font-family: Poppins, sans-serif;
   font-weight: 300;
+}
+.container__aces {
+  background-color: #000000;
 }
