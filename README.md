@@ -7,7 +7,13 @@
 This is an app that build by using TMDB api that have a functionality like netflx you can watch the movie and see the whole cast of the movie rating of the movies also mentioned so give a look.
 
 # Features
-This is an app that let you watch your favorite movie.
+Sorting by date and many more
+- Movie Information
+- Movie Rating
+- Cast Infomation
+- Trailors of movies
+- Search functionality
+- Sorting by date and time (many more options in sorting)
 # Screenshots
  <img src="https://res.cloudinary.com/dmlts9lbk/image/upload/v1683268553/Screenshot_2023-05-05_120255_xkacjl.png"> <img src="https://res.cloudinary.com/dmlts9lbk/image/upload/v1683268560/Screenshot_2023-05-05_120313_kewbjl.png"> <img src="https://res.cloudinary.com/dmlts9lbk/image/upload/v1683268593/Screenshot_2023-05-05_120341_jxyxvl.png"> <img src="https://res.cloudinary.com/dmlts9lbk/image/upload/v1683268603/Screenshot_2023-05-05_120409_pubbh9.png"> <img src="https://res.cloudinary.com/dmlts9lbk/image/upload/v1683268612/Screenshot_2023-05-05_120431_tvxer3.png">
 # Tech Used
